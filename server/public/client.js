@@ -1,7 +1,10 @@
 console.log("js works!");
 
 function turnOn() {
+    event.preventDefault();
+
     console.log('clicked on');
+
     axios({
         method: 'GET',
         url: '/lights/on'
@@ -19,7 +22,10 @@ function turnOn() {
 }
 
 function turnOff() {
+    event.preventDefault();
+
     console.log('clicked off');
+
     axios({
         method: 'GET',
         url: '/lights/off'

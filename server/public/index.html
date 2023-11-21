@@ -56,14 +56,22 @@
             </fieldset>
         </form>
 
-        <form>
+        <form onsubmit="turnOn(event)">
             <fieldset>
 
-                <legend>Turn On/Off</legend>
+                <legend>Turn On</legend>
 
-                <button onclick="turnOn()">Turn On</button>
+                <button type="submit">Turn On</button>
 
-                <button onclick="turnOff()">Turn Off</button>
+            </fieldset>
+        </form>
+
+        <form onsubmit="turnOff(event)">
+            <fieldset>
+
+                <legend>Turn Off</legend>
+
+                <button type="submit">Turn Off</button>
 
             </fieldset>
         </form>
