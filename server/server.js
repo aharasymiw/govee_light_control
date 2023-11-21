@@ -64,7 +64,6 @@ app.get('/lights/off', (req, res) => {
             console.log('Error:', error);
             res.sendStatus(500);
         })
-
 })
 
 app.put('/lights/color', (req, res) => {
@@ -95,7 +94,6 @@ app.put('/lights/color', (req, res) => {
             console.log('Error:', error);
             res.sendStatus(500);
         })
-
 })
 
 app.put('/lights/brightness', (req, res) => {
@@ -124,8 +122,36 @@ app.put('/lights/brightness', (req, res) => {
             console.log('Error:', error);
             res.sendStatus(500);
         })
-
 })
+
+app.put('/lights/color_temp', (req, res) => {
+
+    console.log('set color temp');
+
+    console.log('req.body:', req.body);
+
+    let { value } = req.body;
+
+    const message = {
+        device: MAC,
+        model: DEVICE,
+        cmd: {
+            name: "colorTem",
+            value: Number(value)
+        }
+    };
+
+    axios.put(GOVEE_BASE_URL + '/devices/control', message, headers)
+        .then(response => {
+            console.log("light color temp changed");
+            res.sendStatus(200);
+        })
+        .catch(error => {
+            console.log('Error:', error);
+            res.sendStatus(500);
+        })
+})
+
 
 app.listen(PORT, function () {
     console.log(`You started the server! It is running on port ${PORT}.`);

@@ -102,3 +102,34 @@ function setBrightness(event) {
         }
     )
 }
+
+function setColorTemp(event) {
+    event.preventDefault();
+
+    console.log('set color temp');
+
+    let colorTempInputEl = document.getElementById('color_temp');
+
+    let colorTemp = {
+        value: colorTempInputEl.value,
+    }
+
+    axios({
+        method: 'PUT',
+        url: '/lights/color_temp',
+        data: colorTemp
+    }).then(
+        function (response) {
+            console.log('PUT /lights/color_temp call successful');
+            console.log('response:', response);
+
+            colorTempInputEl.value = '';
+        }
+    ).catch(
+        function (error) {
+            console.log('PUT /lights/color_temp call failed');
+            console.log('error:', error);
+        }
+    )
+
+}
