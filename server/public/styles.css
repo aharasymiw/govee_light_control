@@ -1,3 +1,21 @@
 input {
     min-width: 100px;
 }
+
+/* Turn off users highlighting/selecting things they shouldn't */
+button {
+    user-select: none;
+    /* prefix for safari */
+    -webkit-user-select: none;
+}
+
+@media (display-mode: standalone) {
+    /* You can do this, targeting the app manifest display, but probably don't, too many phones act differently */
+    /* * {
+        margin-bottom: 0px;
+    } */
+
+    body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+    }
+}

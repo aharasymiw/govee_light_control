@@ -2,12 +2,17 @@
 <html lang="en">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Client Server Vanilla Example</title>
-        <link rel="stylesheet" href="./styles.css">
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script defer src="./client.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>🐱 💡!</title>
+        <link rel="manifest" href="app.webmanifest">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script defer src="client.js"></script>
+        <!-- We're isolating this to keep it clear, this is a js file that will install our sw.js -->
+        <script defer src="sw-register.js"></script>
+        <meta name="theme-color" content="#0198E1">
+        <!-- Must be square and png, apple will round the colors for you -->
+        <link rel="apple-touch-icon" href="icons/icon-512.png">
     </head>
 
     <body>

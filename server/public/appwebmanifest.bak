@@ -1,0 +1,26 @@
+{
+    "name": "Govee light control, controle the lights behind my cat's beds!",
+    "short_name": "Govee light control",
+    "start_url": "./", // Sets the url we open on (usually home page, dashboard, or landing page)
+    "theme_color": "blue", // You can use hex if you include: <meta name=quotetheme-colorquote content=quotesamehexvaluequote> in the index header.  Note dashes instead of underscores in theme_color.  This acts as a backup for the tag in the html
+    "scope": "./", // Links inside this domain will render as a webapp.  Links outside will render with an internal browser
+    "display": "standalone",
+    "icons": [ // safari ignores these
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        { // This one is for android, it needs the circle at the center, with a radius of 40% of the icon to be usable space.
+            "src": "icons/maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/icon-1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        }
+    ]
+}
