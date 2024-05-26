@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const axios = require('axios');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 const MAC = process.env.MAC;
 const GOVEE_API_KEY = process.env.GOVEE_API_KEY;
 const DEVICE = process.env.DEVICE;

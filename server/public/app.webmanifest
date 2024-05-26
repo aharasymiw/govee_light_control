@@ -3,6 +3,7 @@
     "short_name": "Govee light control",
     "start_url": "./",
     "orientation": "portrait",
+    "background_color": "peachpuff",
     "theme_color": "#0198E1",
     "scope": "./",
     "display": "standalone",
